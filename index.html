@@ -5,183 +5,255 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Fluency 101: For Everyday Professionals - Aanaab Workshop</title>
 <link rel="icon" href="https://demo.aanaab.net/wp-content/uploads/2025/04/fav-icon-1.png">
-<link rel="icon" href="https://demo.aanaab.net/wp-content/uploads/2025/04/fav-icon-1.png">
-<link rel="icon" type="image/png" href="aanaab-logo.png">
-<link rel="shortcut icon" type="image/png" href="aanaab-logo.png">
-<link rel="icon" type="image/png" href="aanaab-logo.png">
-<link rel="icon" type="image/png" href="https://demo.aanaab.net/wp-content/uploads/2025/04/fav-icon-1.png">
-<meta name="msapplication-TileImage" content="https://demo.aanaab.net/wp-content/uploads/2025/04/fav-icon-1.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    min-height: 100vh;
-    background: #471895;
-    font-family: Poppins, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    padding: 80px 24px 60px;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  .poster-section {
+    min-height: 100vh; background: #471895; font-family: Poppins, sans-serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; padding: 80px 24px 60px;
   }
   .bg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.18; pointer-events: none; }
-  .logo { position: absolute; top: 32px; left: 48px; display: flex; align-items: center; gap: 10px; z-index: 2; }
-  .logo-text { font-size: 26px; font-weight: 700; color: #fff; }
-  .content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 1100px; width: 100%; }
-  .subtitle { font-size: clamp(13px, 1.8vw, 20px); font-weight: 600; color: #2EBD90; margin-bottom: 12px; letter-spacing: .5px; }
-  .title { font-size: clamp(28px, 5vw, 68px); font-weight: 800; color: #2EBD90; line-height: 1.1; margin-bottom: 20px; }
-  .desc { font-size: clamp(14px, 2vw, 24px); color: #fff; line-height: 1.5; margin-bottom: 4px; }
-  .desc b { font-weight: 700; }
-
-  .device-note {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 18px;
-    background: rgba(46,189,144,0.15);
-    border: 1px solid rgba(46,189,144,0.45);
-    border-radius: 30px;
-    padding: 8px 20px;
-    color: #2EBD90;
-    font-size: clamp(12px, 1.3vw, 16px);
-    font-weight: 600;
-  }
-  .device-note svg { flex-shrink: 0; }
-
-  .row { display: flex; align-items: center; gap: clamp(16px, 3vw, 60px); margin-top: clamp(22px, 4vw, 48px); flex-wrap: wrap; justify-content: center; }
-  .block { display: flex; align-items: center; gap: 14px; }
-  .icon { width: clamp(32px, 3.5vw, 52px); height: clamp(32px, 3.5vw, 52px); flex-shrink: 0; }
-  .label { font-size: clamp(10px, 1vw, 12px); color: #2EBD90; opacity: .8; text-transform: uppercase; letter-spacing: 1px; }
-  .val { font-size: clamp(15px, 1.8vw, 26px); font-weight: 700; color: #2EBD90; line-height: 1.2; }
-  .sep { width: 1px; height: 50px; background: #2EBD90; opacity: .4; }
-  .btn {
-    margin-top: clamp(22px, 4vw, 44px);
-    display: inline-block; background: #2EBD90; color: #471895;
-    font-family: Poppins, sans-serif; font-size: clamp(14px, 1.6vw, 20px); font-weight: 700;
-    padding: clamp(12px, 1.5vw, 18px) clamp(28px, 5vw, 64px);
-    border-radius: 50px; text-decoration: none; transition: .2s;
-  }
-  .btn:hover { background: #26a87f; transform: translateY(-2px); }
-  .foot { position: absolute; bottom: 24px; width: 100%; text-align: center; font-size: clamp(11px, 1.1vw, 15px); color: rgba(255,255,255,.45); z-index: 2; }
-
+  .poster-logo { position: absolute; top: 32px; left: 48px; display: flex; align-items: center; gap: 10px; z-index: 2; }
+  .poster-logo-text { font-size: 26px; font-weight: 700; color: #fff; }
+  .poster-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 1100px; width: 100%; }
+  .poster-subtitle { font-size: clamp(13px,1.8vw,20px); font-weight: 600; color: #2EBD90; margin-bottom: 12px; letter-spacing: .5px; }
+  .poster-title { font-size: clamp(28px,5vw,68px); font-weight: 800; color: #2EBD90; line-height: 1.1; margin-bottom: 20px; }
+  .poster-desc { font-size: clamp(14px,2vw,24px); color: #fff; line-height: 1.5; margin-bottom: 4px; }
+  .poster-desc b { font-weight: 700; }
+  .device-note { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; background: rgba(46,189,144,0.15); border: 1px solid rgba(46,189,144,0.45); border-radius: 30px; padding: 8px 20px; color: #2EBD90; font-size: clamp(12px,1.3vw,16px); font-weight: 600; }
+  .poster-row { display: flex; align-items: center; gap: clamp(16px,3vw,60px); margin-top: clamp(22px,4vw,48px); flex-wrap: wrap; justify-content: center; }
+  .poster-block { display: flex; align-items: center; gap: 14px; }
+  .poster-icon { width: clamp(32px,3.5vw,52px); height: clamp(32px,3.5vw,52px); flex-shrink: 0; }
+  .poster-label { font-size: clamp(10px,1vw,12px); color: #2EBD90; opacity: .8; text-transform: uppercase; letter-spacing: 1px; }
+  .poster-val { font-size: clamp(15px,1.8vw,26px); font-weight: 700; color: #2EBD90; line-height: 1.2; }
+  .poster-sep { width: 1px; height: 50px; background: #2EBD90; opacity: .4; }
+  .poster-btn { margin-top: clamp(22px,4vw,44px); display: inline-block; background: #2EBD90; color: #471895; font-family: Poppins, sans-serif; font-size: clamp(14px,1.6vw,20px); font-weight: 700; padding: clamp(12px,1.5vw,18px) clamp(28px,5vw,64px); border-radius: 50px; text-decoration: none; transition: .2s; cursor: pointer; border: none; }
+  .poster-btn:hover { background: #26a87f; transform: translateY(-2px); }
+  .poster-foot { position: absolute; bottom: 24px; width: 100%; text-align: center; font-size: clamp(11px,1.1vw,15px); color: rgba(255,255,255,.45); z-index: 2; }
+  .form-section { background: #f0effc; font-family: 'Tajawal', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 0 0 60px; }
+  .form-header { width: 100%; background: linear-gradient(135deg, #471895, #5B27A8); padding: 36px 40px 32px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .form-logo-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .form-logo-text { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: #fff; }
+  .form-header h2 { font-family: 'Poppins', sans-serif; font-size: clamp(17px,3vw,26px); font-weight: 700; color: #2EBD90; text-align: center; line-height: 1.3; }
+  .event-meta { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+  .meta-chip { display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.1); border: 1px solid rgba(46,189,144,0.35); border-radius: 30px; padding: 6px 16px; color: #2EBD90; font-size: clamp(12px,1.5vw,15px); font-weight: 500; font-family: 'Poppins', sans-serif; direction: ltr; }
+  .device-chip { display: flex; align-items: center; gap: 7px; background: rgba(46,189,144,0.18); border: 1px solid rgba(46,189,144,0.5); border-radius: 30px; padding: 6px 16px; color: #2EBD90; font-size: clamp(11px,1.4vw,14px); font-weight: 600; font-family: 'Poppins', sans-serif; margin-top: 4px; }
+  .form-card { background: #fff; border-radius: 16px; box-shadow: 0 4px 32px rgba(71,24,149,0.12); width: 100%; max-width: 680px; margin: 32px auto 0; overflow: hidden; }
+  .form-card-top { background: linear-gradient(90deg, #471895, #2EBD90); height: 6px; width: 100%; border-radius: 16px 16px 0 0; }
+  .form-body { padding: 36px 40px 40px; }
+  .form-title { font-size: clamp(18px,2.5vw,22px); font-weight: 800; color: #471895; margin-bottom: 6px; }
+  .form-subtitle { font-size: clamp(13px,1.6vw,15px); color: #6b6b8a; margin-bottom: 32px; line-height: 1.6; }
+  .field-group { margin-bottom: 22px; }
+  label { display: block; font-size: clamp(13px,1.5vw,15px); font-weight: 700; color: #471895; margin-bottom: 7px; }
+  label .required { color: #E24B4A; margin-right: 2px; }
+  input[type="text"], input[type="email"], input[type="tel"], select, textarea { width: 100%; border: 1.5px solid #d0ceee; border-radius: 10px; padding: 13px 16px; font-size: clamp(13px,1.5vw,15px); font-family: 'Poppins', sans-serif; color: #1a1266; background: #fafafe; transition: border-color 0.2s, box-shadow 0.2s; outline: none; appearance: none; -webkit-appearance: none; }
+  input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus, textarea:focus { border-color: #471895; box-shadow: 0 0 0 3px rgba(71,24,149,0.10); background: #fff; }
+  select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23471895' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; cursor: pointer; }
+  textarea { resize: vertical; min-height: 90px; }
+  .other-dept-wrap { margin-top: 12px; display: none; animation: fadeSlide 0.25s ease; }
+  .other-dept-wrap.visible { display: block; }
+  @keyframes fadeSlide { from { opacity:0; transform: translateY(-6px); } to { opacity:1; transform: translateY(0); } }
+  .radio-group { display: flex; flex-direction: column; gap: 10px; }
+  .radio-option { display: flex; align-items: center; gap: 12px; padding: 13px 16px; border: 1.5px solid #d0ceee; border-radius: 10px; cursor: pointer; transition: border-color 0.2s, background 0.2s; background: #fafafe; }
+  .radio-option:has(input:checked) { border-color: #471895; background: #f0effc; }
+  .radio-option input[type="radio"] { width: 18px; height: 18px; accent-color: #471895; cursor: pointer; flex-shrink: 0; }
+  .radio-option .radio-label { font-size: clamp(13px,1.5vw,15px); color: #1a1266; font-weight: 500; }
+  .radio-option .radio-desc { font-size: clamp(11px,1.2vw,13px); color: #6b6b8a; margin-top: 2px; }
+  .free-badge { display: inline-flex; align-items: center; gap: 6px; background: #e8faf4; border: 1px solid #2EBD90; color: #0a6e51; font-size: 13px; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-bottom: 24px; }
+  .submit-btn { width: 100%; background: #471895; color: #fff; border: none; border-radius: 12px; padding: 16px; font-size: clamp(15px,1.8vw,18px); font-weight: 700; font-family: 'Poppins', sans-serif; cursor: pointer; transition: background 0.2s, transform 0.1s; margin-top: 10px; }
+  .submit-btn:hover { background: #5B27A8; }
+  .submit-btn:active { transform: scale(0.98); }
+  .success-screen { display: none; flex-direction: column; align-items: center; padding: 56px 40px 48px; text-align: center; gap: 14px; }
+  .success-icon { width: 72px; height: 72px; background: #e8faf4; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+  .success-title { font-size: clamp(20px,3vw,26px); font-weight: 800; color: #471895; }
+  .success-sub { font-size: clamp(14px,1.8vw,16px); color: #6b6b8a; line-height: 1.8; max-width: 460px; }
+  .success-note { display: flex; align-items: flex-start; gap: 10px; background: #f0effc; border: 1px solid rgba(71,24,149,0.15); border-radius: 12px; padding: 14px 18px; text-align: left; max-width: 460px; width: 100%; margin-top: 6px; }
+  .success-note svg { flex-shrink: 0; margin-top: 2px; }
+  .success-note p { font-size: clamp(12px,1.4vw,14px); color: #471895; line-height: 1.6; }
+  .overlay { display: none; position: fixed; inset: 0; background: rgba(20,15,80,0.55); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; padding: 20px; animation: fadeIn 0.2s ease; }
+  .overlay.show { display: flex; }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  .ineligible-card { background: #fff; border-radius: 20px; max-width: 420px; width: 100%; padding: 40px 36px 36px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; box-shadow: 0 20px 60px rgba(71,24,149,0.25); animation: popIn 0.3s cubic-bezier(0.34,1.56,0.64,1); }
+  @keyframes popIn { from { opacity:0; transform: scale(0.85) translateY(20px); } to { opacity:1; transform: scale(1) translateY(0); } }
+  .ineligible-icon-wrap { width: 72px; height: 72px; background: linear-gradient(135deg, #fff3e0, #ffe0cc); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .ineligible-tag { background: #fff3e0; color: #c55a00; font-size: 12px; font-weight: 700; font-family: 'Poppins', sans-serif; letter-spacing: 0.8px; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; }
+  .ineligible-title { font-size: 20px; font-weight: 800; color: #471895; font-family: 'Poppins', sans-serif; line-height: 1.3; }
+  .ineligible-body { font-size: 14px; color: #6b6b8a; line-height: 1.7; }
+  .ineligible-body strong { color: #471895; }
+  .ineligible-divider { width: 100%; border: none; border-top: 1px solid #eeeef8; margin: 6px 0; }
+  .ineligible-tip { display: flex; align-items: flex-start; gap: 10px; background: #f0effc; border-radius: 10px; padding: 12px 16px; text-align: left; width: 100%; }
+  .ineligible-tip svg { flex-shrink: 0; margin-top: 2px; }
+  .ineligible-tip p { font-size: 13px; color: #471895; line-height: 1.6; }
+  .ineligible-close { width: 100%; background: #471895; color: #fff; border: none; border-radius: 10px; padding: 13px; font-size: 15px; font-weight: 700; font-family: 'Poppins', sans-serif; cursor: pointer; transition: background 0.2s; margin-top: 4px; }
+  .ineligible-close:hover { background: #5B27A8; }
+  .field-divider { border: none; border-top: 1px solid #e8e7f7; margin: 28px 0; }
+  .section-label { font-size: 12px; font-weight: 700; color: #8b8ab0; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 18px; }
+  .helper { font-size: 12px; color: #8b8ab0; margin-top: 5px; }
   @media (max-width: 600px) {
-    body { padding: 72px 20px 56px; }
-    .logo { top: 20px; left: 20px; }
-    .logo-text { font-size: 20px; }
-    .sep { display: none; }
-    .row { flex-direction: column; align-items: center; gap: 16px; margin-top: 20px; }
-    .block { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+    .poster-section { padding: 72px 20px 56px; }
+    .poster-logo { top: 20px; left: 20px; }
+    .poster-logo-text { font-size: 20px; }
+    .poster-sep { display: none; }
+    .poster-row { flex-direction: column; align-items: center; gap: 16px; margin-top: 20px; }
+    .poster-block { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
     .device-note { text-align: center; justify-content: center; width: 100%; max-width: 320px; }
-    .title { font-size: clamp(26px, 7.5vw, 36px); }
-    .btn { width: 100%; text-align: center; }
-    .label { text-align: center; }
-    .val { text-align: center; }
+    .poster-btn { width: 100%; text-align: center; }
+    .poster-label, .poster-val { text-align: center; }
+    .form-body { padding: 24px 18px 28px; }
+    .form-header { padding: 24px 18px 22px; }
+    .event-meta { gap: 8px; }
+    .meta-chip { font-size: 12px; padding: 5px 12px; }
+    .success-screen { padding: 40px 20px 36px; }
+    .ineligible-card { padding: 32px 22px 28px; }
   }
 </style>
 </head>
 <body>
 
-<svg class="bg" viewBox="0 0 1456 816" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="80" cy="120" r="3" fill="#fff"/><circle cx="200" cy="80" r="2" fill="#fff"/>
-  <circle cx="350" cy="150" r="3" fill="#fff"/><circle cx="500" cy="60" r="2.5" fill="#fff"/>
-  <circle cx="700" cy="100" r="2" fill="#fff"/><circle cx="900" cy="50" r="3" fill="#fff"/>
-  <circle cx="1100" cy="130" r="2" fill="#fff"/><circle cx="1300" cy="80" r="3" fill="#fff"/>
-  <circle cx="60" cy="400" r="2.5" fill="#fff"/><circle cx="150" cy="600" r="3" fill="#fff"/>
-  <circle cx="300" cy="700" r="2" fill="#fff"/><circle cx="500" cy="750" r="3" fill="#fff"/>
-  <circle cx="700" cy="780" r="2" fill="#fff"/><circle cx="900" cy="750" r="2.5" fill="#fff"/>
-  <circle cx="1100" cy="720" r="3" fill="#fff"/><circle cx="1300" cy="760" r="2" fill="#fff"/>
-  <circle cx="200" cy="300" r="2" fill="#fff"/><circle cx="400" cy="350" r="3" fill="#fff"/>
-  <circle cx="600" cy="320" r="2" fill="#fff"/><circle cx="800" cy="400" r="2.5" fill="#fff"/>
-  <circle cx="1000" cy="360" r="3" fill="#fff"/><circle cx="1200" cy="300" r="2" fill="#fff"/>
-  <line x1="80" y1="120" x2="200" y2="80" stroke="#fff" stroke-width=".5"/>
-  <line x1="200" y1="80" x2="350" y2="150" stroke="#fff" stroke-width=".5"/>
-  <line x1="350" y1="150" x2="500" y2="60" stroke="#fff" stroke-width=".5"/>
-  <line x1="500" y1="60" x2="700" y2="100" stroke="#fff" stroke-width=".5"/>
-  <line x1="700" y1="100" x2="900" y2="50" stroke="#fff" stroke-width=".5"/>
-  <line x1="900" y1="50" x2="1100" y2="130" stroke="#fff" stroke-width=".5"/>
-  <line x1="1100" y1="130" x2="1300" y2="80" stroke="#fff" stroke-width=".5"/>
-  <line x1="60" y1="400" x2="200" y2="300" stroke="#fff" stroke-width=".5"/>
-  <line x1="200" y1="300" x2="400" y2="350" stroke="#fff" stroke-width=".5"/>
-  <line x1="400" y1="350" x2="600" y2="320" stroke="#fff" stroke-width=".5"/>
-  <line x1="600" y1="320" x2="800" y2="400" stroke="#fff" stroke-width=".5"/>
-  <line x1="800" y1="400" x2="1000" y2="360" stroke="#fff" stroke-width=".5"/>
-  <line x1="1000" y1="360" x2="1200" y2="300" stroke="#fff" stroke-width=".5"/>
-  <line x1="150" y1="600" x2="300" y2="700" stroke="#fff" stroke-width=".5"/>
-  <line x1="300" y1="700" x2="500" y2="750" stroke="#fff" stroke-width=".5"/>
-  <line x1="500" y1="750" x2="700" y2="780" stroke="#fff" stroke-width=".5"/>
-  <line x1="700" y1="780" x2="900" y2="750" stroke="#fff" stroke-width=".5"/>
-  <line x1="900" y1="750" x2="1100" y2="720" stroke="#fff" stroke-width=".5"/>
-  <line x1="80" y1="120" x2="60" y2="400" stroke="#fff" stroke-width=".4"/>
-  <line x1="350" y1="150" x2="400" y2="350" stroke="#fff" stroke-width=".4"/>
-  <line x1="700" y1="100" x2="600" y2="320" stroke="#fff" stroke-width=".4"/>
-  <line x1="60" y1="400" x2="150" y2="600" stroke="#fff" stroke-width=".4"/>
-  <line x1="400" y1="350" x2="300" y2="700" stroke="#fff" stroke-width=".4"/>
-  <line x1="800" y1="400" x2="700" y2="780" stroke="#fff" stroke-width=".4"/>
-  <line x1="1200" y1="300" x2="1300" y2="760" stroke="#fff" stroke-width=".4"/>
-</svg>
-
-<div class="logo">
-  <img src="aanaab-logo.png" style="width:38px;height:44px;object-fit:contain;" alt="Aanaab logo">
-  <span class="logo-text">Aanaab</span>
+<div class="overlay" id="ineligible-overlay">
+  <div class="ineligible-card">
+    <div class="ineligible-icon-wrap">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="14" stroke="#e07b30" stroke-width="2"/><line x1="17" y1="9" x2="17" y2="17" stroke="#e07b30" stroke-width="2.2" stroke-linecap="round"/><line x1="17" y1="17" x2="23" y2="21" stroke="#e07b30" stroke-width="2.2" stroke-linecap="round"/><circle cx="17" cy="17" r="2" fill="#e07b30"/></svg>
+    </div>
+    <span class="ineligible-tag">Experience Requirement</span>
+    <p class="ineligible-title">This workshop is for<br>seasoned professionals</p>
+    <p class="ineligible-body"><strong>AI Fluency 101</strong> is designed for professionals with <strong>10+ years</strong> of experience who want to bring AI into their existing workflows.</p>
+    <hr class="ineligible-divider">
+    <div class="ineligible-tip">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#471895" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <p>Keep an eye on our upcoming workshops — we'll have sessions designed for earlier-career professionals soon.</p>
+    </div>
+    <button class="ineligible-close" onclick="closeOverlay()">Got it, thanks!</button>
+  </div>
 </div>
 
-<div class="content">
-  <p class="subtitle">Don't Miss our Workshop</p>
-  <h1 class="title">AI Fluency 101:<br>For Everyday Professionals</h1>
-  <p class="desc">Discover how AI can solve your biggest work challenges</p>
-  <p class="desc"><b>faster &amp; easier than you think</b></p>
-
-  <div class="device-note">
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
-    </svg>
-    Please bring your personal device (laptop or tablet)
+<section class="poster-section" id="poster">
+  <svg class="bg" viewBox="0 0 1456 816" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="80" cy="120" r="3" fill="#fff"/><circle cx="200" cy="80" r="2" fill="#fff"/><circle cx="350" cy="150" r="3" fill="#fff"/><circle cx="500" cy="60" r="2.5" fill="#fff"/><circle cx="700" cy="100" r="2" fill="#fff"/><circle cx="900" cy="50" r="3" fill="#fff"/><circle cx="1100" cy="130" r="2" fill="#fff"/><circle cx="1300" cy="80" r="3" fill="#fff"/><circle cx="60" cy="400" r="2.5" fill="#fff"/><circle cx="150" cy="600" r="3" fill="#fff"/><circle cx="300" cy="700" r="2" fill="#fff"/><circle cx="500" cy="750" r="3" fill="#fff"/><circle cx="700" cy="780" r="2" fill="#fff"/><circle cx="900" cy="750" r="2.5" fill="#fff"/><circle cx="1100" cy="720" r="3" fill="#fff"/><circle cx="1300" cy="760" r="2" fill="#fff"/><circle cx="200" cy="300" r="2" fill="#fff"/><circle cx="400" cy="350" r="3" fill="#fff"/><circle cx="600" cy="320" r="2" fill="#fff"/><circle cx="800" cy="400" r="2.5" fill="#fff"/><circle cx="1000" cy="360" r="3" fill="#fff"/><circle cx="1200" cy="300" r="2" fill="#fff"/>
+    <line x1="80" y1="120" x2="200" y2="80" stroke="#fff" stroke-width=".5"/><line x1="200" y1="80" x2="350" y2="150" stroke="#fff" stroke-width=".5"/><line x1="350" y1="150" x2="500" y2="60" stroke="#fff" stroke-width=".5"/><line x1="500" y1="60" x2="700" y2="100" stroke="#fff" stroke-width=".5"/><line x1="700" y1="100" x2="900" y2="50" stroke="#fff" stroke-width=".5"/><line x1="900" y1="50" x2="1100" y2="130" stroke="#fff" stroke-width=".5"/><line x1="1100" y1="130" x2="1300" y2="80" stroke="#fff" stroke-width=".5"/><line x1="60" y1="400" x2="200" y2="300" stroke="#fff" stroke-width=".5"/><line x1="200" y1="300" x2="400" y2="350" stroke="#fff" stroke-width=".5"/><line x1="400" y1="350" x2="600" y2="320" stroke="#fff" stroke-width=".5"/><line x1="600" y1="320" x2="800" y2="400" stroke="#fff" stroke-width=".5"/><line x1="800" y1="400" x2="1000" y2="360" stroke="#fff" stroke-width=".5"/><line x1="1000" y1="360" x2="1200" y2="300" stroke="#fff" stroke-width=".5"/><line x1="150" y1="600" x2="300" y2="700" stroke="#fff" stroke-width=".5"/><line x1="300" y1="700" x2="500" y2="750" stroke="#fff" stroke-width=".5"/><line x1="500" y1="750" x2="700" y2="780" stroke="#fff" stroke-width=".5"/><line x1="700" y1="780" x2="900" y2="750" stroke="#fff" stroke-width=".5"/><line x1="900" y1="750" x2="1100" y2="720" stroke="#fff" stroke-width=".5"/><line x1="80" y1="120" x2="60" y2="400" stroke="#fff" stroke-width=".4"/><line x1="350" y1="150" x2="400" y2="350" stroke="#fff" stroke-width=".4"/><line x1="700" y1="100" x2="600" y2="320" stroke="#fff" stroke-width=".4"/><line x1="60" y1="400" x2="150" y2="600" stroke="#fff" stroke-width=".4"/><line x1="400" y1="350" x2="300" y2="700" stroke="#fff" stroke-width=".4"/><line x1="800" y1="400" x2="700" y2="780" stroke="#fff" stroke-width=".4"/><line x1="1200" y1="300" x2="1300" y2="760" stroke="#fff" stroke-width=".4"/>
+  </svg>
+  <div class="poster-logo">
+    <img src="aanaab-logo.png" style="width:38px;height:44px;object-fit:contain;" alt="Aanaab logo">
+    <span class="poster-logo-text">Aanaab</span>
   </div>
-
-  <div class="row">
-    <div class="block">
-      <svg class="icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="4" y="10" width="44" height="38" rx="5" stroke="#2EBD90" stroke-width="2"/>
-        <line x1="4" y1="20" x2="48" y2="20" stroke="#2EBD90" stroke-width="2"/>
-        <line x1="16" y1="4" x2="16" y2="16" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="36" y1="4" x2="36" y2="16" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round"/>
-        <rect x="10" y="26" width="7" height="5" rx="1" fill="#2EBD90"/>
-        <rect x="22" y="26" width="7" height="5" rx="1" fill="#2EBD90"/>
-        <rect x="34" y="26" width="7" height="5" rx="1" fill="#2EBD90"/>
-        <rect x="10" y="35" width="7" height="5" rx="1" fill="#2EBD90"/>
-        <rect x="22" y="35" width="7" height="5" rx="1" fill="#2EBD90"/>
-        <rect x="34" y="35" width="7" height="5" rx="1" fill="#2EBD90"/>
-      </svg>
-      <div>
-        <div class="label">Date</div>
-        <div class="val">Wednesday,<br>April 8, 2026</div>
+  <div class="poster-content">
+    <p class="poster-subtitle">Don't Miss our Workshop</p>
+    <h1 class="poster-title">AI Fluency 101:<br>For Everyday Professionals</h1>
+    <p class="poster-desc">Discover how AI can solve your biggest work challenges</p>
+    <p class="poster-desc"><b>faster &amp; easier than you think</b></p>
+    <div class="device-note">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+      Please bring your personal device (laptop or tablet)
+    </div>
+    <div class="poster-row">
+      <div class="poster-block">
+        <svg class="poster-icon" viewBox="0 0 52 52" fill="none"><rect x="4" y="10" width="44" height="38" rx="5" stroke="#2EBD90" stroke-width="2"/><line x1="4" y1="20" x2="48" y2="20" stroke="#2EBD90" stroke-width="2"/><line x1="16" y1="4" x2="16" y2="16" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round"/><line x1="36" y1="4" x2="36" y2="16" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round"/><rect x="10" y="26" width="7" height="5" rx="1" fill="#2EBD90"/><rect x="22" y="26" width="7" height="5" rx="1" fill="#2EBD90"/><rect x="34" y="26" width="7" height="5" rx="1" fill="#2EBD90"/><rect x="10" y="35" width="7" height="5" rx="1" fill="#2EBD90"/><rect x="22" y="35" width="7" height="5" rx="1" fill="#2EBD90"/><rect x="34" y="35" width="7" height="5" rx="1" fill="#2EBD90"/></svg>
+        <div><div class="poster-label">Date</div><div class="poster-val">Wednesday,<br>April 8, 2026</div></div>
+      </div>
+      <div class="poster-sep"></div>
+      <div class="poster-block">
+        <svg class="poster-icon" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="20" stroke="#2EBD90" stroke-width="2"/><line x1="26" y1="12" x2="26" y2="26" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round"/><line x1="26" y1="26" x2="36" y2="32" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round"/><circle cx="26" cy="26" r="2.5" fill="#2EBD90"/><line x1="26" y1="6" x2="26" y2="10" stroke="#2EBD90" stroke-width="1.5"/><line x1="26" y1="42" x2="26" y2="46" stroke="#2EBD90" stroke-width="1.5"/><line x1="6" y1="26" x2="10" y2="26" stroke="#2EBD90" stroke-width="1.5"/><line x1="42" y1="26" x2="46" y2="26" stroke="#2EBD90" stroke-width="1.5"/></svg>
+        <div><div class="poster-label">Time</div><div class="poster-val">10:00 AM - 5:00 PM</div></div>
       </div>
     </div>
-    <div class="sep"></div>
-    <div class="block">
-      <svg class="icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="26" cy="26" r="20" stroke="#2EBD90" stroke-width="2"/>
-        <line x1="26" y1="12" x2="26" y2="26" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="26" y1="26" x2="36" y2="32" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="26" cy="26" r="2.5" fill="#2EBD90"/>
-        <line x1="26" y1="6" x2="26" y2="10" stroke="#2EBD90" stroke-width="1.5"/>
-        <line x1="26" y1="42" x2="26" y2="46" stroke="#2EBD90" stroke-width="1.5"/>
-        <line x1="6" y1="26" x2="10" y2="26" stroke="#2EBD90" stroke-width="1.5"/>
-        <line x1="42" y1="26" x2="46" y2="26" stroke="#2EBD90" stroke-width="1.5"/>
-      </svg>
-      <div>
-        <div class="label">Time</div>
-        <div class="val">10:00 AM - 5:00 PM</div>
+    <button class="poster-btn" onclick="scrollToForm()">Register Now &rarr;</button>
+  </div>
+  <p class="poster-foot">Subscription to AI tools may be required</p>
+</section>
+
+<section class="form-section" id="registration">
+  <div class="form-header">
+    <div class="form-logo-row">
+      <img src="aanaab-logo.png" style="width:38px;height:44px;object-fit:contain;" alt="Aanaab logo">
+      <span class="form-logo-text">Aanaab</span>
+    </div>
+    <h2>AI Fluency 101: For Everyday Professionals</h2>
+    <div class="event-meta">
+      <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Wednesday, April 8, 2026</span>
+      <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>10:00 AM – 5:00 PM</span>
+      <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Location TBA</span>
+    </div>
+    <div class="device-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>Please bring your personal device (laptop or tablet)</div>
+  </div>
+  <div class="form-card">
+    <div class="form-card-top"></div>
+    <div class="form-body" id="form-body">
+      <div class="free-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free Admission</div>
+      <h3 class="form-title">Register for the Workshop</h3>
+      <p class="form-subtitle">Fill in your details below to confirm your spot at <strong>AI Fluency 101: For Everyday Professionals</strong>. This workshop is open to professionals with <strong>10+ years of experience</strong>.</p>
+      <p class="section-label">Personal Information</p>
+      <div class="field-group"><label><span class="required">*</span> Full Name</label><input type="text" id="fullname" placeholder="Enter your full name" required></div>
+      <div class="field-group"><label><span class="required">*</span> Mobile Number</label><input type="tel" id="phone" placeholder="05XXXXXXXX" required></div>
+      <div class="field-group"><label><span class="required">*</span> Email Address</label><input type="email" id="email" placeholder="example@email.com" required></div>
+      <hr class="field-divider">
+      <p class="section-label">Work Information</p>
+      <div class="field-group"><label><span class="required">*</span> Organization / Company</label><input type="text" id="company" placeholder="Your company or institution name" required></div>
+      <div class="field-group"><label><span class="required">*</span> Job Title</label><input type="text" id="jobtitle" placeholder="e.g. Project Manager, Data Analyst..." required></div>
+      <div class="field-group">
+        <label><span class="required">*</span> Department</label>
+        <select id="department" required onchange="handleDeptChange(this)">
+          <option value="" disabled selected>Select your department</option>
+          <option>Information Technology</option><option>Finance & Accounting</option><option>Human Resources</option><option>Marketing & Sales</option><option>Operations & Logistics</option><option>Customer Service</option><option>Legal & Compliance</option><option>Senior Management</option><option value="Other">Other</option>
+        </select>
+        <div class="other-dept-wrap" id="other-dept-wrap"><input type="text" id="other-dept" placeholder="Please specify your department"></div>
       </div>
+      <hr class="field-divider">
+      <p class="section-label">Years of Experience</p>
+      <div class="field-group">
+        <label><span class="required">*</span> How many years of professional experience do you have?</label>
+        <p class="helper" style="margin-bottom:12px;">Attendance requires a minimum of 10 years of experience</p>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="experience" value="less-than-10"><div><div class="radio-label">Less than 10 years</div></div></label>
+          <label class="radio-option"><input type="radio" name="experience" value="10-15"><div><div class="radio-label">10 – 15 years</div><div class="radio-desc">✓ Eligible to attend</div></div></label>
+          <label class="radio-option"><input type="radio" name="experience" value="15-20"><div><div class="radio-label">15 – 20 years</div><div class="radio-desc">✓ Eligible to attend</div></div></label>
+          <label class="radio-option"><input type="radio" name="experience" value="20+"><div><div class="radio-label">More than 20 years</div><div class="radio-desc">✓ Eligible to attend</div></div></label>
+        </div>
+      </div>
+      <button class="submit-btn" onclick="submitForm()">Submit Registration Request</button>
+    </div>
+    <div class="success-screen" id="success-screen">
+      <div class="success-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0a6e51" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <p class="success-title">Registration Request Received!</p>
+      <p class="success-sub">Thank you for your interest in<br><strong>AI Fluency 101: For Everyday Professionals</strong>.<br><br>This is a <strong>registration request</strong> and is subject to approval. We will send you a confirmation email once your registration has been accepted, along with the venue details and any further information.</p>
+      <div class="success-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#471895" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p>Please check your inbox (and spam folder) for our confirmation. If you don't hear from us within a few days, feel free to follow up.</p></div>
     </div>
   </div>
+</section>
 
-  <a href="workshop_registration_form.html" class="btn">Register Now &rarr;</a>
-</div>
-
-<p class="foot">Subscription to AI tools may be required</p>
-
+<script>
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyJkKDLUmtQGIxqd3Utdqbz_gkkopm2alKkiaSRVrDT_OQmXoeRkA2tdt4oBOvFpB6xWw/exec";
+  function scrollToForm() { document.getElementById('registration').scrollIntoView({ behavior: 'smooth' }); }
+  function handleDeptChange(sel) {
+    const wrap = document.getElementById('other-dept-wrap');
+    if (sel.value === 'Other') { wrap.classList.add('visible'); document.getElementById('other-dept').focus(); }
+    else { wrap.classList.remove('visible'); document.getElementById('other-dept').value = ''; }
+  }
+  function closeOverlay() {
+    document.getElementById('ineligible-overlay').classList.remove('show');
+    const radio = document.querySelector('input[name="experience"][value="less-than-10"]');
+    if (radio) radio.checked = false;
+  }
+  async function submitForm() {
+    const fullname = document.getElementById('fullname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const company = document.getElementById('company').value.trim();
+    const jobtitle = document.getElementById('jobtitle').value.trim();
+    const deptSel = document.getElementById('department').value;
+    const otherDept = document.getElementById('other-dept').value.trim();
+    const experience = document.querySelector('input[name="experience"]:checked');
+    const department = (deptSel === 'Other') ? (otherDept || 'Other') : deptSel;
+    if (!fullname || !phone || !email || !company || !jobtitle || !deptSel || !experience) { alert('Please fill in all required fields *'); return; }
+    if (deptSel === 'Other' && !otherDept) { alert('Please specify your department.'); return; }
+    if (experience.value === 'less-than-10') { document.getElementById('ineligible-overlay').classList.add('show'); return; }
+    const btn = document.querySelector('.submit-btn');
+    btn.textContent = 'Submitting...'; btn.disabled = true;
+    const payload = { fullname, phone, email, company, jobtitle, department, experience: experience.value };
+    try { await fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }); } catch(err) { console.error(err); }
+    document.getElementById('form-body').style.display = 'none';
+    document.getElementById('success-screen').style.display = 'flex';
+  }
+</script>
 </body>
 </html>
