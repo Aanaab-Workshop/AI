@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register – AI Fluency 101: For Everyday Professionals</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f0effc;
+    font-family: 'Tajawal', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 60px;
+  }
+
+  .header {
+    width: 100%;
+    background: linear-gradient(135deg, #471895, #5B27A8);
+    padding: 36px 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .logo-text-header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(17px, 3vw, 26px);
+    font-weight: 700;
+    color: #2EBD90;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .header .event-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .meta-chip {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(46,189,144,0.35);
+    border-radius: 30px;
+    padding: 6px 16px;
+    color: #2EBD90;
+    font-size: clamp(12px, 1.5vw, 15px);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    direction: ltr;
+  }
+
+  /* device note in header */
+  .device-chip {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(46,189,144,0.18);
+    border: 1px solid rgba(46,189,144,0.5);
+    border-radius: 30px;
+    padding: 6px 16px;
+    color: #2EBD90;
+    font-size: clamp(11px, 1.4vw, 14px);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 4px;
+  }
+
+  .form-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(71,24,149,0.12);
+    width: 100%;
+    max-width: 680px;
+    margin: 32px auto 0;
+    overflow: hidden;
+  }
+
+  .form-card-top {
+    background: linear-gradient(90deg, #471895, #2EBD90);
+    height: 6px;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .form-body {
+    padding: 36px 40px 40px;
+  }
+
+  .form-title {
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-weight: 800;
+    color: #471895;
+    margin-bottom: 6px;
+  }
+  .form-subtitle {
+    font-size: clamp(13px, 1.6vw, 15px);
+    color: #6b6b8a;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .field-group {
+    margin-bottom: 22px;
+  }
+  label {
+    display: block;
+    font-size: clamp(13px, 1.5vw, 15px);
+    font-weight: 700;
+    color: #471895;
+    margin-bottom: 7px;
+  }
+  label .required {
+    color: #E24B4A;
+    margin-right: 2px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    border: 1.5px solid #d0ceee;
+    border-radius: 10px;
+    padding: 13px 16px;
+    font-size: clamp(13px, 1.5vw, 15px);
+    font-family: 'Poppins', sans-serif;
+    color: #1a1266;
+    background: #fafafe;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #471895;
+    box-shadow: 0 0 0 3px rgba(71,24,149,0.10);
+    background: #fff;
+  }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23471895' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+    cursor: pointer;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 90px;
+  }
+
+  .other-dept-wrap {
+    margin-top: 12px;
+    display: none;
+    animation: fadeSlide 0.25s ease;
+  }
+  .other-dept-wrap.visible { display: block; }
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 16px;
+    border: 1.5px solid #d0ceee;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    background: #fafafe;
+  }
+  .radio-option:has(input:checked) {
+    border-color: #471895;
+    background: #f0effc;
+  }
+  .radio-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #471895;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .radio-option .radio-label {
+    font-size: clamp(13px, 1.5vw, 15px);
+    color: #1a1266;
+    font-weight: 500;
+  }
+  .radio-option .radio-desc {
+    font-size: clamp(11px, 1.2vw, 13px);
+    color: #6b6b8a;
+    margin-top: 2px;
+  }
+
+  .free-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #e8faf4;
+    border: 1px solid #2EBD90;
+    color: #0a6e51;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: #471895;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 10px;
+  }
+  .submit-btn:hover { background: #5B27A8; }
+  .submit-btn:active { transform: scale(0.98); }
+
+  /* Success screen */
+  .success-screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 56px 40px 48px;
+    text-align: center;
+    gap: 14px;
+  }
+  .success-icon {
+    width: 72px;
+    height: 72px;
+    background: #e8faf4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .success-title {
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 800;
+    color: #471895;
+  }
+  .success-sub {
+    font-size: clamp(14px, 1.8vw, 16px);
+    color: #6b6b8a;
+    line-height: 1.8;
+    max-width: 460px;
+  }
+  .success-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #f0effc;
+    border: 1px solid rgba(71,24,149,0.15);
+    border-radius: 12px;
+    padding: 14px 18px;
+    text-align: left;
+    max-width: 460px;
+    width: 100%;
+    margin-top: 6px;
+  }
+  .success-note svg { flex-shrink: 0; margin-top: 2px; }
+  .success-note p {
+    font-size: clamp(12px, 1.4vw, 14px);
+    color: #471895;
+    line-height: 1.6;
+  }
+
+  /* Ineligible overlay */
+  .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(20,15,80,0.55);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.2s ease;
+  }
+  .overlay.show { display: flex; }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+  .ineligible-card {
+    background: #fff;
+    border-radius: 20px;
+    max-width: 420px;
+    width: 100%;
+    padding: 40px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    box-shadow: 0 20px 60px rgba(71,24,149,0.25);
+    animation: popIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  @keyframes popIn {
+    from { opacity:0; transform: scale(0.85) translateY(20px); }
+    to   { opacity:1; transform: scale(1) translateY(0); }
+  }
+
+  .ineligible-icon-wrap {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, #fff3e0, #ffe0cc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+  }
+
+  .ineligible-tag {
+    background: #fff3e0;
+    color: #c55a00;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+  }
+
+  .ineligible-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #471895;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3;
+  }
+
+  .ineligible-body {
+    font-size: 14px;
+    color: #6b6b8a;
+    line-height: 1.7;
+  }
+  .ineligible-body strong { color: #471895; }
+
+  .ineligible-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #eeeef8;
+    margin: 6px 0;
+  }
+
+  .ineligible-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #f0effc;
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-align: left;
+    width: 100%;
+  }
+  .ineligible-tip svg { flex-shrink: 0; margin-top: 2px; }
+  .ineligible-tip p {
+    font-size: 13px;
+    color: #471895;
+    line-height: 1.6;
+  }
+
+  .ineligible-close {
+    width: 100%;
+    background: #471895;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 4px;
+  }
+  .ineligible-close:hover { background: #5B27A8; }
+
+  .field-divider {
+    border: none;
+    border-top: 1px solid #e8e7f7;
+    margin: 28px 0;
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8b8ab0;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 18px;
+  }
+
+  .helper {
+    font-size: 12px;
+    color: #8b8ab0;
+    margin-top: 5px;
+  }
+
+  @media (max-width: 720px) {
+    .form-body { padding: 24px 18px 28px; }
+    .header { padding: 24px 18px 22px; }
+    .event-meta { gap: 8px; }
+    .meta-chip { font-size: 12px; padding: 5px 12px; }
+    .success-screen { padding: 40px 20px 36px; }
+    .success-note { padding: 12px 14px; }
+    .ineligible-card { padding: 32px 22px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Ineligible overlay -->
+<div class="overlay" id="ineligible-overlay">
+  <div class="ineligible-card">
+    <div class="ineligible-icon-wrap">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="17" r="14" stroke="#e07b30" stroke-width="2"/>
+        <line x1="17" y1="9" x2="17" y2="17" stroke="#e07b30" stroke-width="2.2" stroke-linecap="round"/>
+        <line x1="17" y1="17" x2="23" y2="21" stroke="#e07b30" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="17" cy="17" r="2" fill="#e07b30"/>
+      </svg>
+    </div>
+    <span class="ineligible-tag">Experience Requirement</span>
+    <p class="ineligible-title">This workshop is for<br>seasoned professionals</p>
+    <p class="ineligible-body">
+      <strong>AI Fluency 101</strong> is designed for professionals with
+      <strong>10+ years</strong> of experience who want to bring AI into their existing workflows.
+    </p>
+    <hr class="ineligible-divider">
+    <div class="ineligible-tip">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#471895" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <p>Keep an eye on our upcoming workshops — we'll have sessions designed for earlier-career professionals soon.</p>
+    </div>
+    <button class="ineligible-close" onclick="closeOverlay()">Got it, thanks!</button>
+  </div>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <div class="logo-row">
+    <img src="aanaab-logo.png" style="width:38px;height:44px;object-fit:contain;" alt="Aanaab logo">
+    <span class="logo-text-header">Aanaab</span>
+  </div>
+  <h1>AI Fluency 101: For Everyday Professionals</h1>
+  <div class="event-meta">
+    <span class="meta-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Wednesday, April 8, 2026
+    </span>
+    <span class="meta-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      10:00 AM – 5:00 PM
+    </span>
+    <span class="meta-chip">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Location TBA
+    </span>
+  </div>
+  <div class="device-chip">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+    </svg>
+    Please bring your personal device (laptop or tablet)
+  </div>
+</div>
+
+<!-- Form card -->
+<div class="form-card">
+  <div class="form-card-top"></div>
+
+  <div class="form-body" id="form-body">
+
+    <div class="free-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      Free Admission
+    </div>
+
+    <h2 class="form-title">Register for the Workshop</h2>
+    <p class="form-subtitle">Fill in your details below to confirm your spot at <strong>AI Fluency 101: For Everyday Professionals</strong>. This workshop is open to professionals with <strong>10+ years of experience</strong>.</p>
+
+    <p class="section-label">Personal Information</p>
+
+    <div class="field-group">
+      <label><span class="required">*</span> Full Name</label>
+      <input type="text" id="fullname" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="field-group">
+      <label><span class="required">*</span> Mobile Number</label>
+      <input type="tel" id="phone" placeholder="05XXXXXXXX" required>
+    </div>
+
+    <div class="field-group">
+      <label><span class="required">*</span> Email Address</label>
+      <input type="email" id="email" placeholder="example@email.com" required>
+    </div>
+
+    <hr class="field-divider">
+
+    <p class="section-label">Work Information</p>
+
+    <div class="field-group">
+      <label><span class="required">*</span> Organization / Company</label>
+      <input type="text" id="company" placeholder="Your company or institution name" required>
+    </div>
+
+    <div class="field-group">
+      <label><span class="required">*</span> Job Title</label>
+      <input type="text" id="jobtitle" placeholder="e.g. Project Manager, Data Analyst..." required>
+    </div>
+
+    <div class="field-group">
+      <label><span class="required">*</span> Department</label>
+      <select id="department" required onchange="handleDeptChange(this)">
+        <option value="" disabled selected>Select your department</option>
+        <option>Information Technology</option>
+        <option>Finance & Accounting</option>
+        <option>Human Resources</option>
+        <option>Marketing & Sales</option>
+        <option>Operations & Logistics</option>
+        <option>Customer Service</option>
+        <option>Legal & Compliance</option>
+        <option>Senior Management</option>
+        <option value="Other">Other</option>
+      </select>
+      <div class="other-dept-wrap" id="other-dept-wrap">
+        <input type="text" id="other-dept" placeholder="Please specify your department">
+      </div>
+    </div>
+
+    <hr class="field-divider">
+
+    <p class="section-label">Years of Experience</p>
+
+    <div class="field-group">
+      <label><span class="required">*</span> How many years of professional experience do you have?</label>
+      <p class="helper" style="margin-bottom: 12px;">Attendance requires a minimum of 10 years of experience</p>
+      <div class="radio-group">
+        <label class="radio-option">
+          <input type="radio" name="experience" value="less-than-10">
+          <div>
+            <div class="radio-label">Less than 10 years</div>
+          </div>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="experience" value="10-15">
+          <div>
+            <div class="radio-label">10 – 15 years</div>
+            <div class="radio-desc">✓ Eligible to attend</div>
+          </div>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="experience" value="15-20">
+          <div>
+            <div class="radio-label">15 – 20 years</div>
+            <div class="radio-desc">✓ Eligible to attend</div>
+          </div>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="experience" value="20+">
+          <div>
+            <div class="radio-label">More than 20 years</div>
+            <div class="radio-desc">✓ Eligible to attend</div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <button class="submit-btn" onclick="submitForm()">Submit Registration Request</button>
+
+  </div>
+
+  <!-- Success screen -->
+  <div class="success-screen" id="success-screen">
+    <div class="success-icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0a6e51" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+    <p class="success-title">Registration Request Received!</p>
+    <p class="success-sub">
+      Thank you for your interest in<br>
+      <strong>AI Fluency 101: For Everyday Professionals</strong>.<br><br>
+      This is a <strong>registration request</strong> and is subject to approval.
+      We will send you a confirmation email once your registration has been accepted, along with the venue details and any further information.
+    </p>
+    <div class="success-note">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#471895" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <p>Please check your inbox (and spam folder) for our confirmation. If you don't hear from us within a few days, feel free to follow up.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyJkKDLUmtQGIxqd3Utdqbz_gkkopm2alKkiaSRVrDT_OQmXoeRkA2tdt4oBOvFpB6xWw/exec";
+
+  function handleDeptChange(sel) {
+    const wrap = document.getElementById('other-dept-wrap');
+    if (sel.value === 'Other') {
+      wrap.classList.add('visible');
+      document.getElementById('other-dept').focus();
+    } else {
+      wrap.classList.remove('visible');
+      document.getElementById('other-dept').value = '';
+    }
+  }
+
+  function closeOverlay() {
+    document.getElementById('ineligible-overlay').classList.remove('show');
+    const radio = document.querySelector('input[name="experience"][value="less-than-10"]');
+    if (radio) radio.checked = false;
+  }
+
+  async function submitForm() {
+    const fullname   = document.getElementById('fullname').value.trim();
+    const phone      = document.getElementById('phone').value.trim();
+    const email      = document.getElementById('email').value.trim();
+    const company    = document.getElementById('company').value.trim();
+    const jobtitle   = document.getElementById('jobtitle').value.trim();
+    const deptSel    = document.getElementById('department').value;
+    const otherDept  = document.getElementById('other-dept').value.trim();
+    const experience = document.querySelector('input[name="experience"]:checked');
+
+    const department = (deptSel === 'Other') ? (otherDept || 'Other') : deptSel;
+
+    if (!fullname || !phone || !email || !company || !jobtitle || !deptSel || !experience) {
+      alert('Please fill in all required fields *');
+      return;
+    }
+    if (deptSel === 'Other' && !otherDept) {
+      alert('Please specify your department.');
+      return;
+    }
+    if (experience.value === 'less-than-10') {
+      document.getElementById('ineligible-overlay').classList.add('show');
+      return;
+    }
+
+    const btn = document.querySelector('.submit-btn');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+
+    const payload = { fullname, phone, email, company, jobtitle, department, experience: experience.value };
+
+    try {
+      await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } catch (err) {
+      console.error('Submit error:', err);
+    }
+
+    document.getElementById('form-body').style.display = 'none';
+    document.getElementById('success-screen').style.display = 'flex';
+  }
+</script>
+
+</body>
+</html>
