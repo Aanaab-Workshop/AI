@@ -90,6 +90,10 @@
   .field-divider { border: none; border-top: 1px solid #e8e7f7; margin: 28px 0; }
   .section-label { font-size: 12px; font-weight: 700; color: #8b8ab0; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 18px; }
   .helper { font-size: 12px; color: #8b8ab0; margin-top: 5px; }
+  .poster-badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 16px 0 18px; }
+  .poster-badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 30px; padding: 7px 16px; font-size: clamp(11px,1.2vw,14px); font-weight: 600; font-family: Poppins, sans-serif; }
+  .poster-badge--green { background: rgba(46,189,144,0.2); border: 1px solid #2EBD90; color: #2EBD90; }
+  .poster-badge--outline { background: rgba(255,255,255,0.1); border: 1px solid rgba(46,189,144,0.5); color: #fff; }
   .date-br { display: inline; }
   .date-space { display: none; }
   .title-br { display: none; }
@@ -147,9 +151,7 @@
   <div class="poster-content">
     <p class="poster-subtitle">Don't Miss our Workshop</p>
     <h1 class="poster-title">AI Fluency 101:<span class="title-br"><br></span> For Everyday Professionals</h1>
-    <p class="poster-desc">Discover how AI can solve your biggest work challenges<b> faster &amp; easier than you think</b></p>
-
-
+    <p class="poster-desc" style="margin-top: clamp(16px,3vw,32px);">Learn to use AI in your daily work —<b> practical skills you can apply from day one</b></p>
     <div class="poster-row">
       <div class="poster-block">
         <svg class="poster-icon" viewBox="0 0 52 52" fill="none"><rect x="4" y="10" width="44" height="38" rx="5" stroke="#2EBD90" stroke-width="2"/><line x1="4" y1="20" x2="48" y2="20" stroke="#2EBD90" stroke-width="2"/><line x1="16" y1="4" x2="16" y2="16" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round"/><line x1="36" y1="4" x2="36" y2="16" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round"/><rect x="10" y="26" width="7" height="5" rx="1" fill="#2EBD90"/><rect x="22" y="26" width="7" height="5" rx="1" fill="#2EBD90"/><rect x="34" y="26" width="7" height="5" rx="1" fill="#2EBD90"/><rect x="10" y="35" width="7" height="5" rx="1" fill="#2EBD90"/><rect x="22" y="35" width="7" height="5" rx="1" fill="#2EBD90"/><rect x="34" y="35" width="7" height="5" rx="1" fill="#2EBD90"/></svg>
@@ -165,6 +167,11 @@
         <svg class="poster-icon" viewBox="0 0 52 52" fill="none"><path d="M26 6C17.16 6 10 13.16 10 22C10 33.5 26 46 26 46C26 46 42 33.5 42 22C42 13.16 34.84 6 26 6Z" stroke="#2EBD90" stroke-width="2"/><circle cx="26" cy="22" r="5" stroke="#2EBD90" stroke-width="2"/></svg>
         <div><div class="poster-label">Location</div><div class="poster-val">In-person, Jeddah</div></div>
       </div>
+    </div>
+    <div class="poster-badges">
+      <span class="poster-badge poster-badge--green"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free Admission</span>
+      <span class="poster-badge poster-badge--outline"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Face-to-Face · Venue TBA</span>
+      <span class="poster-badge poster-badge--outline"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>10+ Years Experience</span>
     </div>
     <button class="poster-btn" onclick="scrollToForm()">Register Now &rarr;</button>
   </div>
@@ -184,10 +191,11 @@
       <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>In-person: Jeddah | Venue TBA</span>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
-      <div class="device-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free Admission</div>
-       <div class="device-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>10+ years of experience required</div>
-      <div class="device-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>Please bring your personal device (laptop or tablet)</div>
-      <div class="device-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M8 12h8M12 8v8"/></svg>Subscription to AI tools may be required</div>
+      <div class="device-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2EBD90" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free Admission</div>
+      <div class="device-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>10+ Years Experience Required</div>
+      <div class="device-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>Bring your laptop or tablet</div>
+      <div class="device-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>AI tools subscription may be required</div>
+    </div>
     </div>
   </div>
   <div class="form-card">
